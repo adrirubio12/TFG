@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psicologia NutriFit Analytics</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      id="cssCambio"
+    />
+  </head>
+
+  <body>
+    <!-- Encabezado -->
+    <div class="encabezado" id="inicio">
+      <h1 class="titulo-principal">Psicología</h1>
+      <nav class="navegacion-principal">
+        <ul class="menu-principal">
+          <li><a href="{{ url_for('index') }}">Inicio</a></li>
+          <li><a href="{{ url_for('guia') }}">Guía</a></li>
+          <li><a href="{{ url_for('psi') }}">Psicología</a></li>
+          <li><a href="#piePagina">Pie de Página</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="contenido">
+      <h2 class="titulo_psicologia">
+        Psicología de la Nutrición y del Deporte
+      </h2>
+      <p class="texto_psicologia">
+        <br /><br />La nutrición y el deporte son dos elementos esenciales para
+        el bienestarfísico y mental de un individuo. Sin embargo, mientras que
+        susbeneficios para la salud son numerosos y reconocidos, también hay
+        unaparte negativa que puede acarrear una serie de problemas debido a
+        lacomida y la actividad física. <br /><br /><br /><br /><strong
+          >Importancia de la nutrición y el ejercicio en la psicología:</strong
+        ><br /><br />La alimentación y la práctica regular de actividad
+        físicatienen un profundo impacto en nuestra salud mental. Una
+        dietaequilibrada suministra al cerebro los nutrientes esenciales que
+        necesitapara funcionar correctamente. Del mismo modo, el ejercicio
+        regularlibera endorfinas, neurotransmisores que actúan como
+        analgésicosnaturales del cuerpo y mejoran el estado de ánimo. Está
+        comprobado queel mantenimiento de una dieta saludable combinada con la
+        actividadfísica regular puede combatir enfermedades mentales como la
+        depresión yla ansiedad. <br /><br /><br /><br /><strong
+          >Problemas alimentarios vinculados al deporte:</strong
+        ><br /><br />En el mundo del deporte puede, en ocasiones, propiciar la
+        aparición deproblemas alimentarios y obsesiones. Por ejemplo, el deseo
+        de mejorar élrendimiento atlético o alcanzar un ideal estético puede
+        llevar a algunaspersonas a adoptar dietas extremadamente ricas en
+        proteínas o asuplementarse excesivamente. Esta obsesión por ciertos
+        gruposalimenticios o suplementos puede causar desequilibrios
+        nutricionales yafectar negativamente la salud física y mental.<br /><br /><br /><br /><strong
+          >El lado oscuro del gimnasio y la psicología</strong
+        >:<br /><br />Los gimnasios, aunque son centros de bienestar y salud,
+        también puedenconvertirse en focos de presión psicológica. La
+        comparación constantecon otros, el bombardeo de ideales corporales
+        inalcanzables y laobsesión con el progreso pueden crear un ambiente
+        tóxico para la saludmental. Las personas pueden sentirse inseguras,
+        desarrollar trastornosde la imagen corporal o incluso llegar a
+        obsesionarse con élentrenamiento hasta el punto de entrenar demasiado,
+        lo que resultaperjudicial tanto física como mentalmente.
+        <br /><br /><br /><br /><strong
+          >Bienestar integral (nutrición, deporte y mente): </strong
+        ><br /><br />Debemos ver el deporte y la comida como algo más que solo
+        apariencia. Se trata de cómo te sientes por dentro y por fuera. Es vital
+        aprender y tener ayuda para acercarnos correctamente al ejercicio y la
+        dieta. La conexión entre comer, hacer ejercicio y cómo pensamos es
+        profunda. Aunque comer bien y moverse trae muchos beneficios,
+        necesitamos un enfoque balanceado para realmente cuidar de nuestra salud
+        total.<br /><br /><br /><br /><br /><br />
+      </p>
+    </div>
+
+    <!-- Pie de Página -->
+    <div class="piePagina" id="piePagina">
+      <div class="infoContacto">
+        Información de contacto: arubirod@myuax.com<br />
+        Centro de estudio: Universidad Alfonso X el Sabio<br />
+        Redes sociales:<br />
+        LinkedIn: Adrián Rubio Rodríguez<br />
+        <a href="#inicio"> Inicio</a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  </body>
+</html>

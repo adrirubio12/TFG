@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Psicologia NutriFit Analytics</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      id="cssCambio"
+    />
+  </head>
+
+  <body>
+    <!-- Encabezado -->
+    <div class="encabezado" id="inicio">
+      <h1 class="titulo-principal">Resultados</h1>
+      <nav class="navegacion-principal">
+        <ul class="menu-principal">
+          <li><a href="{{ url_for('index') }}">Inicio</a></li>
+          <li><a href="{{ url_for('guia') }}">Guía</a></li>
+          <li><a href="{{ url_for('psi') }}">Psicología</a></li>
+          <li><a href="#piePagina">Pie de Página</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="contenido">
+      <h2 class="macros">División macronutrientes en la dieta</h2>
+      <img
+        class="imagen"
+        src="{{ url_for('static', filename=ruta_imagen) }}"
+        alt="Imagen seleccionada"
+      />
+      <p class="ne">
+        <strong>Kilocalorías diarias que debes consumir: {{ ne }} Kcal</strong>
+      </p>
+
+      <h2 class="tabla">Tabla de alimentos</h2>
+      <div class="tablas">
+        <table>
+          <thead>
+            <tr>
+              <th>Alimento</th>
+              <th>kcal por cada 100g</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for grupo in dieta %} {% for alimento in grupo %}
+            <tr>
+              <td>{{ alimento['nombre'] }}</td>
+              <td>{{ alimento['kcal'] }}</td>
+            </tr>
+            {% endfor %} {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p class="tipo_rutina">
+        <strong>Tipo de rutina recomendada: {{ tipo_rutina }}</strong>
+      </p>
+      <h2 class="tabla">Tabla de ejercicios</h2>
+      <div class="tablas">
+        <table>
+          <thead>
+            <tr>
+              <th>Músculo</th>
+              <th>Ejercicio</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for musculo, ejercicios in rutina.items() %} {% for ejercicio in
+            ejercicios %}
+            <tr>
+              <td>{{ musculo }}</td>
+              <td>{{ ejercicio }}</td>
+            </tr>
+            {% endfor %} {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pie de Página -->
+    <div class="piePagina" id="piePagina">
+      <div class="infoContacto">
+        Información de contacto: arubirod@myuax.com<br />
+        Centro de estudio: Universidad Alfonso X el Sabio<br />
+        Redes sociales:<br />
+        LinkedIn: Adrián Rubio Rodríguez<br />
+        <a href="#inicio"> Inicio</a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  </body>
+</html>
